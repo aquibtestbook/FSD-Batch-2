@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="stopTimeout" onclick="stopTimeout()">Stop Timeout</button>
+    <button id="stopInterval" onclick="stopInterval()">Stop Interval</button>
+    <script>
+        // let randomUser = `{"results":[{"gender":"female","name":{"title":"Miss","first":"Gabriella","last":"Wilson"},"location":{"street":{"number":5787,"name":"Nowlin Rd"},"city":"Lakewood","state":"Hawaii","country":"United States","postcode":53062,"coordinates":{"latitude":"81.4354","longitude":"107.6809"},"timezone":{"offset":"+5:30","description":"Bombay, Calcutta, Madras, New Delhi"}},"email":"gabriella.wilson@example.com","login":{"uuid":"5f0b9873-7a2b-413b-93a7-f762b8cc4135","username":"heavyzebra529","password":"niceguy","salt":"QlRfoUvl","md5":"3f32e0a20e9c1059b836e12d4513f70b","sha1":"9ca256553e6a318afe0320cb073c0c08cd8bc2d7","sha256":"b31325a1a5ad007e79c4b1a3862d22c9ce78bf0288460be0862b4afe191a765f"},"dob":{"date":"1966-03-22T05:25:33.822Z","age":56},"registered":{"date":"2004-10-31T01:56:52.098Z","age":17},"phone":"(687) 402-3630","cell":"(940) 827-6037","id":{"name":"SSN","value":"406-70-0089"},"picture":{"large":"https://randomuser.me/api/portraits/women/71.jpg","medium":"https://randomuser.me/api/portraits/med/women/71.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/71.jpg"},"nat":"US"}],"info":{"seed":"6bcc866c0a970862","results":1,"page":1,"version":"1.4"}}`;
+
+        // console.log(randomUser);
+
+        // let convertedUser = JSON.parse(randomUser); //JSON to JS Object
+
+        // console.log(convertedUser);
+
+        // let sendData = JSON.stringify(convertedUser); //JS Object to JSON
+
+        // console.log(sendData);
+
+
+        let counter = 0;
+
+        console.log("hello");
+        console.log(" world!");
+
+        function printDelay() {
+            console.log("Coming from timeout!");
+        }
+
+        let myTimeout = setTimeout(printDelay, 3000);
+
+        console.log("After the timeout");
+
+        function myCount() {
+            counter = counter + 1;
+            console.log("Count : " + counter);
+        }
+
+        let myInterval = setInterval(myCount, 2000);
+
+        // Create 2 buttons - Stop Timeout and Stop Interval
+
+        function stopTimeout() {
+            clearTimeout(myTimeout);
+        }
+
+        function stopInterval() {
+            clearInterval(myInterval);
+        }
+
+    </script>
+</body>
+
+</html>
